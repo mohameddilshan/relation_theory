@@ -1,42 +1,40 @@
-# relation_theory
+#relation_theory
 #Sep 18,2023
 ---
 ##Relation 1
-
-|**Driver ID**|**Driver Name**|**Bus Number**|
-|---          |---            |---           |
-|001          |"Harry"        |8877          |
-|002          |"Ron"          |4940          |
-|003          |"Hermoine"     |4550          |
-|004          |"Remus"        |4546          |
+|**Driver ID**|**Driver Name**         |**Bus Number**         |
+|---          |---                     |---                    |
+|001(D.I, INT)|"harry"(D.N,STR)        |8877(B.N,INT)          |
+|002(D.I, INT)|"Ron"(D.N,STR)          |4940(B.N,INT)          |
+|003(D.I, INT)|"Hermoine"(D.N,STR)     |4550(B.N,INT)          |
+|004(D.I, INT)|"Remus"(D.N,STR)        |4546(B.N,INT)          |
 
 ##Relation 2
-
 |**conductor id**|**conductor**|**Bus Number**|
 |---             |---          |---           |
-|010             |"Tokyo"      |3281          |
-|011             |""nairobi""    |4550        |
-|012             |"Reo"        |4667          |
-|013             |"Berlin"     |8877          |
+|010(C.I,INT)    |"tokyo(C,N,STR)"      |3281(B.N1,INT)|
+|011(C.I,INT)    |"nairobi(C,N,STR)"    |4550(B.N1,INT)|
+|012(C.I,INT)    |"reo(C,N,STR)"        |4667(B.N1,INT)|
+|013(C.I,INT)    |"berlin(C.N,STR)"     |8877(B.N1,INT)|
 
-##find the relation of Dare the driver and conductor traveling in a bus?
+##Find the conductor and the bus driver working in the same bus?
 
-###projuction
+###Projection
 Relation1,Driver Name,Bus Number
-|**Driver Name**|**Bus Number**|
-|---            |---           |
-|"Harry"        |8877          |
-|"Ron"          |4940          |
-|"Hermoine"     |4550          |
-|"Remus"        |4546          |
+|**Driver Name**         |**Bus Number**|
+|---                     |---           |
+|"harry"(D.N,STR)        |8877(B.N,INT) |
+|"Ron"(D.N,STR)          |4940(B.N,INT) |
+|"Hermoine"(D.N,STR)     |4550(B.N,INT) |
+|"Remus"(D.N,STR)        |4546(B.N,INT) |
 
 Relation2,Conductor name,bus number
-|**conductor**|**Bus Number**|
-|---          |---           |
-|tokyo        |3281          |
-|"nairobi"      |4550          |
-|"Reo"        |4667          |
-|"Berlin"     |8877          |
+|**conductor**         |**Bus Number**          |
+|---                   |---                     |
+|tokyo(C,N,STR)        |3281(B.N1,INT)          |
+|"nairobi(C,N,STR)"    |4550(B.N1,INT)          |
+|"reo(C.N,STR)"        |4667(B.N1,INT)          |
+|"berlin(C.N,STR)"     |8877(B.N1,INT)          |
 
 
 
@@ -46,91 +44,91 @@ Relation2,Conductor name,bus number
 Relation1XRelation2
 |**Driver Name**|**Bus Number**|**conductor**|**Bus Number**|
 |---            |---           |---          |---           |
-|"Harry"        |8877          |tokyo        |3281          |
-|"Harry"        |8877          |"nairobi"      |4550          |
-|"Harry"        |8877          |"Reo"        |4667          |
-|"Harry"        |8877          |"Berlin"     |8877          |
-|"Ron"          |4940          |tokyo        |3281          |
-|"Ron"          |4940          |"nairobi"      |4550          |
-|"Ron"          |4940          |"Reo"        |4667          |
-|"Ron"          |4940          |"Berlin"     |8877          |
-|"Hermoine"     |4550          |tokyo        |3281          |
-|"Hermoine"     |4550          |"nairobi"      |4550          |
-|"Hermoine"     |4550          |"Reo"        |4667          |
-|"Hermoine"     |4550          |"Berlin"     |8877          |
-|"Remus"        |4546          |tokyo        |3281          |
-|"Remus"        |4546          |"nairobi"      |4550          |
-|"Remus"        |4546          |"Reo"        |4667          | 
-|"Remus"        |4546          |"Berlin"     |8877          |
+|"harry"(D.N,STR)        |8877(B.N,INT)          |tokyo(C,N,STR)        |3281(B.N1,INT)          |
+|"harry"(D.N,STR)        |8877(B.N,INT)          |"nairobi(C,N,STR)"      |4550(B.N,INT)          |
+|"harry"(D.N,STR)        |8877(B.N,INT)          |"reo(C,N,STR)"        |4667(B.N1,INT)          |
+|"harry"(D.N,STR)        |8877(B.N,INT)          |"berlin(C.N,STR)"     |8877(B.N,INT)          |
+|"Ron"(D.N,STR)          |4940(B.N,INT)          |tokyo(C,N,STR)        |3281(B.N1,INT)          |
+|"Ron"(D.N,STR)          |4940(B.N,INT)          |"nairobi(C,N,STR)"      |4550(B.N,INT)          |
+|"Ron"(D.N,STR)          |4940(B.N,INT)          |"reo(C,N,STR)"        |4667(B.N1,INT)          |
+|"Ron"(D.N,STR)          |4940(B.N,INT)          |"berlin(C.N,STR)"     |8877(B.N,INT)          |
+|"Hermoine"(D.N,STR)     |4550(B.N,INT)          |tokyo(C,N,STR)        |3281(B.N1,INT)          |
+|"Hermoine"(D.N,STR)     |4550(B.N,INT)          |"nairobi(C,N,STR)"      |4550(B.N,INT)          |
+|"Hermoine"(D.N,STR)     |4550(B.N,INT)          |"reo(C,N,STR)"        |4667(B.N1,INT)          |
+|"Hermoine"(D.N,STR)     |4550(B.N,INT)          |"berlin(C.N,STR)"     |8877(B.N,INT)          |
+|"Remus"(D.N,STR)        |4546(B.N,INT)          |tokyo(C,N,STR)        |3281(B.N1,INT)          |
+|"Remus"(D.N,STR)        |4546(B.N,INT)          |"nairobi(C,N,STR)"      |4550(B.N,INT)          |
+|"Remus"(D.N,STR)        |4546(B.N,INT)          |"reo(C,N,STR)"        |4667(B.N1,INT)          | 
+|"Remus"(D.N,STR)        |4546(B.N,INT)          |"berlin(C.N,STR)"     |8877(B.N,INT)          |
 
 ###filter
 Relation1.Bus Number = Relation2.Bus Number
 |**Driver Name**|**Bus Number**|**conductor Name**|**Bus Number**|
 |---            |---           |---               |---           |
-|"Harry"        |8877          |"Berlin"          |8877          |
-|"Hermoine"     |4550          |"nairobi"           |4550          |
+|"harry"(D.N,STR)        |8877(B.N,INT)          |"berlin(C.N,STR)"          |8877(B.N,INT)          |
+|"Hermoine"(D.N,STR)     |4550(B.N,INT)          |"nairobi(C,N,STR)"           |4550(B.N,INT)          |
 
-###projuction
+###Projection
 Relation1.Driver name,Relation2.Conductor Name
 
-|"Harry"   |"Berlin"|
-|"Hermoine"|"nairobi" |
+|"harry"(D.N,STR)   |"berlin(C.N,STR)"|
+|"Hermoine"(D.N,STR)|"nairobi(C,N,STR)" |
 
-##which conductor work with driver "Harry"?
+##which conductor work with driver "harry"(D.N,STR)?
 
-###projuction
+###Projection
 Relation1.Driver Name
 
 |**Driver Name**  |
 |---              |
-|"Harry"          |
-|"Ron"            |
-|"Hermoine"       |
-|"Remus"          |
+|"harry"(D.N,STR)          |
+|"Ron"(D.N,STR)            |
+|"Hermoine"(D.N,STR)       |
+|"Remus"(D.N,STR)          |
 
 Relation2.condoctur Name
 
 |**conductor Name**|
 |---               |
-|Tokyo             |
-|"nairobi"           |
-|"Reo"             |
-|"Berlin"          |
+|tokyo(C,N,STR)             |
+|"nairobi(C,N,STR)"         |
+|"reo(C,N,STR)"             |
+|"berlin(C.N,STR)"          |
 
 ###Cross Product
 Relation1XRelation2
 |**Driver Name**|**conductor Name**|
 |---            |---               |
-|"Harry"        |Tokyo             |
-|"Harry"        |"nairobi"           |
-|"Harry"        |"Reo"             |
-|"Harry"        |"Berlin"          |
-|"Ron"          |Tokyo             |
-|"Ron"          |"nairobi"           |
-|"Ron"          |"Reo"             |
-|"Ron"          |"Berlin"          |
-|"Hermoine"     |Tokyo             |
-|"Hermoine"     |"nairobi"           |
-|"Hermoine"     |"Reo"             |
-|"Hermoine"     |"Berlin"          |
-|"Remus"        |Tokyo             |
-|"Remus"        |"nairobi"           |
-|"Remus"        |"Reo"             |
-|"Remus"        |"Berlin"          |
+|"harry"(D.N,STR)        |tokyo(C,N,STR)             |
+|"harry"(D.N,STR)        |"nairobi(C.N,STR)"         |
+|"harry"(D.N,STR)        |"reo(C,N,STR)"             |
+|"harry"(D.N,STR)        |"berlin(C.N,STR)"          |
+|"Ron"(D.N,STR)          |tokyo(C,N,STR)             |
+|"Ron"(D.N,STR)          |"nairobi(C,N,STR)"         |
+|"Ron"(D.N,STR)          |"reo(C,N,STR)"             |
+|"Ron"(D.N,STR)          |"berlin(C.N,STR)"          |
+|"Hermoine"(D.N,STR)     |tokyo(C,N,STR)             |
+|"Hermoine"(D.N,STR)     |"nairobi(C,N,STR)"         |
+|"Hermoine"(D.N,STR)     |"reo(C,N,STR)"             |
+|"Hermoine"(D.N,STR)     |"berlin(C.N,STR)"          |
+|"Remus"(D.N,STR)        |tokyo(C,N,STR)             |
+|"Remus"(D.N,STR)        |"nairobi(C,N,STR)"         |
+|"Remus"(D.N,STR)        |"reo(C,N,STR)"             |
+|"Remus"(D.N,STR)        |"berlin(C.N,STR)"          |
 
 ###Filter 
-Relation1.Driver Name = "Harry"
+Relation1.Driver Name = "harry"(D.N,STR)
 
 |**Driver Name**  |**conductor Name**|
 |---              |---               |
-|"Harry"          |Tokyo             |
-|"Harry"          |"nairobi"           |
-|"Harry"          |"Reo"             |
-|"Harry"          |"Berlin"          |
+|"harry"(D.N,STR)          |tokyo(C,N,STR)             |
+|"harry"(D.N,STR)          |"nairobi(C,N,STR)"         |
+|"harry"(D.N,STR)          |"reo(C,N,STR)"             |
+|"harry"(D.N,STR)          |"berlin(C.N,STR)"          |
 
-###Projuction
+###Projection
 Relation2.condutor Name
-|Tokyo  |
-|"nairobi"|
-|Reo    |
-|Berlin |
+|tokyo(C,N,STR)  |
+|"nairobi(C,N,STR)"|
+|reo(C,N,STR)    |
+|berlin(C.N,STR) |
